@@ -35,7 +35,7 @@ or as a native command
 
 ### Run 32-bit Windows binary
 ```sh
-singularity exec winehq.sif exec wine /path/to/windows_32bit_exe
+singularity exec winehq.sif wine /path/to/windows_32bit_exe
 ```
 
 ## License
