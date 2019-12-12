@@ -1,16 +1,16 @@
-# Singularity QGIS
+# Singularity WineHQ
 
-[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/3587)
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/3891)
 [![GitHub License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-Singularity image for [QGIS](https://qgis.org/en/site/index.html). It was built on top of the base Docker image [ubuntu](https://hub.docker.com/_/ubuntu). Packages installed: `qgis qgis-plugin-grass`
+Singularity image for [WineHQ](https://www.winehq.org/). It was built on top of the base Docker image [ubuntu](https://hub.docker.com/_/ubuntu).
 
 ## Build
 
-You can build a local Singularity image named `qgis.sif` with:
+You can build a local Singularity image named `winehq.sif` with:
 
 ```sh
-sudo singularity build qgis.sif Singularity
+sudo singularity build winehq.sif Singularity
 ```
 
 ## Deploy
@@ -18,21 +18,25 @@ sudo singularity build qgis.sif Singularity
 Instead of building it yourself you can download the pre-built image from [Singularity Hub](https://www.singularity-hub.org) with:
 
 ```sh
-singularity pull qgis.sif shub://OSC/sa_singularity_qgis
+singularity pull winehq.sif shub://OSC/sa_singularity_winehq
 ```
 
 ## Run
 
-### Start QGIS
-QGIS is started using the default run command:
+### Run 64-bit Windows binary
+WineHQ is started using the default run command:
 ```sh
-singularity run qgis.sif
+singularity run winehq.sif /path/to/windows_64bit_exe
 ```
 or as a native command
 ```sh
-./qgis.sif
+./winehq.sif /path/to/windows_64bit_exe
 ```
 
+### Run 32-bit Windows binary
+```sh
+singularity exec winehq.sif exec wine /path/to/windows_32bit_exe
+```
 
 ## License
 
