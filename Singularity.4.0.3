@@ -15,7 +15,8 @@ From: ubuntu:18.04
 
     apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
     apt update
-    DEBIAN_FRONTEND=noninteractive apt install -y winehq-stable=4.0.3~bionic
+    DEBIAN_FRONTEND=noninteractive apt install -y wine-stable-amd64=4.0.3~bionic wine-stable-i386=4.0.3~bionic
+    DEBIAN_FRONTEND=noninteractive apt install -y wine-stable=4.0.3~bionic winehq-stable=4.0.3~bionic
 
     # Clean up
     apt autoclean
