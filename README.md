@@ -41,3 +41,6 @@ singularity exec winehq.sif wine /path/to/windows_32bit_exe
 ## License
 
 The code is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+## How to install NotePad ++
+https://linuxhint.com/install-winehq-on-ubuntu-20-04/
